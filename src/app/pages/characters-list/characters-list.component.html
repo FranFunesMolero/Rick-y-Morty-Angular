@@ -1,0 +1,16 @@
+<section class="container my-4">
+  <div>
+    <app-busqueda (searchEmit)="buscar($event)"></app-busqueda>
+  </div>
+  <div class="mb-3">
+    <button class="btn btn-success me-3" (click)="prevPage()" [disabled]="urlPrev === null">PREV</button>
+    <button class="btn btn-success" (click)="nextPage()" [disabled]="urlNext === null">NEXT</button>
+  </div>
+  <div class="row g-3">
+    @for(character of arrCharacters; track character.id){
+    <article class="col-12 col-md-6 col-lg-3">
+      <app-character-card [myCharacter]="character"></app-character-card>
+    </article>
+    }
+  </div>
+</section>

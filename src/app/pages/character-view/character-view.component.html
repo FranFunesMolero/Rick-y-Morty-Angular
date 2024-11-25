@@ -1,0 +1,20 @@
+<div class="my-3 container">
+  <section class="card p-4 shadow">
+    <div class="row g-4">
+      <figure class="col-12 col-md-4">
+        <img class="img-fluid" [src]="oneCharacter?.image" [alt]="oneCharacter?.name">
+      </figure>
+      <div class="col-12 col-md-8">
+        <h2>{{oneCharacter?.name}}</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Especie: {{oneCharacter?.species}} </li>
+          <li class="list-group-item">Genero: {{oneCharacter?.gender}} </li>
+          <li class="list-group-item">Status: <span [class.text-danger]="oneCharacter?.status === 'Dead'"
+              [class.text-warning]="oneCharacter?.status === 'unknown'"
+              [class.text-success]="oneCharacter?.status === 'Alive'">{{oneCharacter?.status}}</span> </li>
+        </ul>
+        <a [routerLink]="['/characters']" class="mt-3 btn btn-success">Lista personajes</a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,8 @@
+<a class="d-block characterLink text-decoration-none" [routerLink]="['/character', myCharacter?.id]">
+  <div class="card p-3">
+    <figure>
+      <img class="img-fluid" [src]="myCharacter?.image" [alt]="myCharacter?.name">
+    </figure>
+    <p class="fs-4 text-center">{{myCharacter?.name}}</p>
+  </div>
+</a>

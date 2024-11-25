@@ -1,0 +1,10 @@
+<form [formGroup]="searchForm" (ngSubmit)="getSearchData()" class="d-flex mb-3 gap-2">
+  <input class="form-control" type="text" placeholder="introduce el nombre" formControlName="name">
+  <select formControlName="status" class="form-select">
+    <option value="">Selecciona una opcion</option>
+    <option value="Alive">Vivo</option>
+    <option value="Dead">Muerto</option>
+    <option value="unknown">Desconocido</option>
+  </select>
+  <input type="submit" class="btn btn-success" value="Buscar">
+</form>

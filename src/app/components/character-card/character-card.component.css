@@ -1,0 +1,7 @@
+.characterLink .card {
+  border: 3px solid green;
+}
+
+.characterLink:hover .card {
+  border-color: goldenrod;
+}
